@@ -4,19 +4,31 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "prisma generate && prisma db push && next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@fullcalendar/core": "^6.1.8",
+    "@fullcalendar/daygrid": "^6.1.8",
+    "@fullcalendar/interaction": "^6.1.8",
+    "@fullcalendar/react": "^6.1.8",
+    "@prisma/client": "^4.16.1",
     "@types/node": "20.3.1",
     "@types/react": "18.2.13",
     "@types/react-dom": "18.2.6",
+    "@vercel/postgres": "^0.4.0",
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.7",
+    "framer-motion": "^10.12.16",
     "next": "13.4.7",
+    "prisma": "^4.16.1",
     "react": "18.2.0",
+    "react-calendar": "^4.3.0",
     "react-dom": "18.2.0",
+    "react-icons": "^4.10.1",
+    "react-router-dom": "6",
+    "styled-components": "^6.0.0-rc.5",
     "typescript": "5.1.3"
   }
 }

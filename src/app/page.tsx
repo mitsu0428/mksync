@@ -1,95 +1,64 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client";
+
+import React from "react";
+import styled from "styled-components";
+import "react-calendar/dist/Calendar.css"; // カレンダーのcss
+import Calendar from "@/components/page/Calendar";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    <Wrapper>
+      <Title>MKSync</Title>
+      <SubTitle>SNS管理 カレンダーアプリケーション</SubTitle>
+      <Descripiton>
+        Instagram、Tiktok、YouTubeの投稿を管理するカレンダーアプリケーションです。
+      </Descripiton>
+      <CalendarWrapper>
+        <Calendar />
+      </CalendarWrapper>
+      <TodayPostWrapper></TodayPostWrapper>
+    </Wrapper>
+  );
 }
+
+const Wrapper = styled.section`
+  padding: 32px;
+`;
+
+const Title = styled.h1`
+  font-size: 32px;
+  padding: 16px;
+  text-align: center;
+  color: #666;
+`;
+
+const SubTitle = styled.h2`
+  font-size: 24px;
+  padding: 16px;
+  text-align: left;
+  color: #666;
+`;
+
+const Descripiton = styled.p`
+  font-size: 16px;
+  padding: 16px;
+  color: #666;
+`;
+
+const CalendarWrapper = styled.div`
+  margin-top: 32px;
+  padding: 16px;
+  font-size: 24px;
+  background-color: #eee;
+  min-height: 400px;
+  border-radius: 8px;
+`;
+
+const TodayPostWrapper = styled.div`
+  margin-top: 32px;
+  padding: 16px;
+  font-size: 24px;
+  background-color: #eee;
+  min-height: 400px;
+  border-radius: 8px;
+`;
