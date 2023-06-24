@@ -4,7 +4,5 @@ yarn create next-app --typescript
 
 ## 使用するツール
 
-- @mui/material @emotion/react @emotion/styled
 - framer-motion
-- react-calendar
-- react-router-dom@6
+- reac full-calendar
